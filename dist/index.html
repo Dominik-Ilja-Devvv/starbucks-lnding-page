@@ -14,7 +14,7 @@
 <body>
   <section>
 
-    <div class="circle"></div>
+    <div class="circle" id="drink-background"></div>
 
     <header>
 
@@ -44,15 +44,15 @@
 
 
       <div class="imgBox">
-        <img class="starbucks" src="images/drink-green.png" alt="">
+        <img class="starbucks" id="drink-display" src="images/drink-green.png" alt="">
       </div>
 
     </div>
 
     <ul class="thumb">
-      <li><img src="images/thumb1.png" alt="" onclick="imgSlider('images/drink-green.png');changeCircleColor('#017143')"></li>
-      <li><img src="images/thumb2.png" alt="" onclick="imgSlider('images/drink-pink.png');changeCircleColor('#eb7495')"></li>
-      <li><img src="images/thumb3.png" alt="" onclick="imgSlider('images/drink-purple.png');changeCircleColor('#d752b1')"></li>
+      <li><img class="thumbnail-image" src="images/thumb1.png" alt="" data-image-path="./images/drink-green.png" data-color="#017143"></li>
+      <li><img class="thumbnail-image" src="images/thumb2.png" alt="" data-image-path="./images/drink-pink.png" data-color="#eb7495"></li>
+      <li><img class="thumbnail-image" src="images/thumb3.png" alt="" data-image-path="./images/drink-purple.png" data-color="#d752b1"></li>
     </ul>
 
     <ul class="sci">
@@ -69,17 +69,7 @@
 
   </section>
 
-  <script type="text/javascript">
-    function imgSlider(anything) {
-      document.querySelector(".starbucks").src = anything;
-    }
-
-    function changeCircleColor(color) {
-      const circle = document.querySelector(".circle");
-      circle.style.background = color;
-    }
-
-  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
