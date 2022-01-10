@@ -12,62 +12,91 @@
 </head>
 
 <body>
-  <section>
 
-    <div class="circle" id="drink-background"></div>
+  <header class="main-header relative py-2 px-1">
 
-    <header>
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-space-between">
+        <a href="#">
+          <img class="main-header__logo" src="images/logo.png" alt="Starbucks Logo">
+        </a>
 
-      <a class="logo" href="#">
-        <img src="images/logo.png" alt="Starbucks Logo">
-      </a>
+        <!-- ========== TABLET & DESKTOP NAVIGATION ========== -->
+        <nav class="main-header__nav">
+          <ul class=" d-flex list-style-none p-0 m-0 text-center w100">
+            <li><a class="d-inline-block pr-2 font-md fw-500 text-decoration-none link-dark-ph trans-fast" href="#">Menu</a></li>
+            <li><a class="d-inline-block pr-2 font-md fw-500 text-decoration-none link-dark-ph trans-fast" href="#">Rewards</a></li>
+            <li><a class="d-inline-block pr-2 font-md fw-500 text-decoration-none link-dark-ph trans-fast" href="#">Gift Cards</a></li>
+            <li><a class="d-inline-block pr-2 font-md fw-500 text-decoration-none link-dark-ph trans-fast" href="#">Contact</a></li>
+          </ul>
+        </nav>
 
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">What's New</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+        <!-- ========== MOBILE NAVIGATION ========== -->
+        <nav class="main-header__mobile-nav d-flex align-items-center justify-content-center z-menu py-4" id="mobile-nav">
+          <ul class="list-style-none p-0 m-0 text-center w100">
+            <li><a class="d-inline-block w100 py-2 font-xlg fw-600 text-decoration-none link-dark-ph trans-fast" href="#">Menu</a></li>
+            <li><a class="d-inline-block w100 py-2 font-xlg fw-600 text-decoration-none link-dark-ph trans-fast" href="#">Rewards</a></li>
+            <li><a class="d-inline-block w100 py-2 font-xlg fw-600 text-decoration-none link-dark-ph trans-fast" href="#">Gift Cards</a></li>
+            <li><a class="d-inline-block w100 py-2 font-xlg fw-600 text-decoration-none link-dark-ph trans-fast" href="#">Contact</a></li>
+          </ul>
+        </nav>
 
-    </header>
-
-    <div class="content">
-
-      <div class="textBox">
-        <h2>
-          It's not just coffee <br>
-          It's <span>Starbucks</span>
-        </h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, autem assumenda consectetur corporis provident aspernatur vel repudiandae magnam maiores deserunt ut, nostrum, sit quidem?</p>
-        <a href="#">Learn More</a>
+        <!-- ========== MOBILE MENU TOGGLE========== -->
+        <button class="main-header__mobile-toggle" id="mobile-toggle" type="button">
+          <i class="fas fa-bars fa-2x"></i>
+        </button>
       </div>
-
-
-      <div class="imgBox">
-        <img class="starbucks" id="drink-display" src="images/drink-green.png" alt="">
-      </div>
-
     </div>
 
-    <ul class="thumb">
-      <li><img class="thumbnail-image" src="images/thumb1.png" alt="" data-image-path="./images/drink-green.png" data-color="#017143"></li>
-      <li><img class="thumbnail-image" src="images/thumb2.png" alt="" data-image-path="./images/drink-pink.png" data-color="#eb7495"></li>
-      <li><img class="thumbnail-image" src="images/thumb3.png" alt="" data-image-path="./images/drink-purple.png" data-color="#d752b1"></li>
-    </ul>
 
-    <ul class="sci">
-      <li>
-        <a href="#"><i class="fab fa-2x fa-facebook-square"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fab fa-2x fa-twitter-square"></i></a>
-      </li>
-      <li>
-        <a href="#"><i class="fab fa-2x fa-instagram-square"></i></a>
-      </li>
-    </ul>
+  </header>
 
+  <!-- <div class="landing"> -->
+
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <section class="d-flex flex-dir-col align-items-center justify-content-center relative w100">
+
+    <div class="relative mw-600  px-1">
+      <h2 class="responsive-title fw-500 clr-dark mb-0">
+        It's not just coffee <br>
+        It's <span class="clr-primary fw-900">Starbucks</span>
+      </h2>
+      <p class="clr-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, autem assumenda consectetur corporis provident aspernatur vel repudiandae magnam maiores deserunt ut, nostrum, sit quidem?</p>
+      <a class="btn btn-primary pill" href="#">Learn More</a>
+    </div>
   </section>
+
+  <section class="drink-display container">
+    <div class="drink-display__main">
+      <img class="drink-display__image z-tooltip" id="drink-display" src="images/drink-green.png" alt="">
+      <div class="drink-display__background" id="drink-background"></div>
+    </div>
+    <!-- <div class="circle-2" id="drink-background"></div> -->
+
+    <!-- ========== DRINK THUMBNAILS ========== -->
+    <ul class="drink-display__thumbnails">
+      <li><img class="drink-display__thumbnail-image" src="images/drink-green.png" alt="" data-image-path="./images/drink-green.png" data-color="#006241"></li>
+      <li><img class="drink-display__thumbnail-image" src="images/drink-pink.png" alt="" data-image-path="./images/drink-pink.png" data-color="#eb7495"></li>
+      <li><img class="drink-display__thumbnail-image" src="images/drink-purple.png" alt="" data-image-path="./images/drink-purple.png" data-color="#d752b1"></li>
+    </ul>
+  </section>
+
+  <!-- ========== SOCIAL ICON SIDEBAR ========== -->
+  <aside>
+    <ul class="sci font-lg">
+      <li>
+        <a href="#"><i class="fab fa-fw fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      </li>
+    </ul>
+  </aside>
+
 
   <script src="js/script.js"></script>
 </body>
