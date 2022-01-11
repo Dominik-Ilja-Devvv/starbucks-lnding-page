@@ -51,9 +51,6 @@
 
   </header>
 
-  <!-- <div class="landing"> -->
-
-
   <!-- ========== MAIN CONTENT ========== -->
   <section class="d-flex flex-dir-col align-items-center justify-content-center relative w100">
 
@@ -72,7 +69,6 @@
       <img class="drink-display__image z-tooltip" id="drink-display" src="images/drink-green.png" alt="">
       <div class="drink-display__background" id="drink-background"></div>
     </div>
-    <!-- <div class="circle-2" id="drink-background"></div> -->
 
     <!-- ========== DRINK THUMBNAILS ========== -->
     <ul class="drink-display__thumbnails">
@@ -83,16 +79,20 @@
   </section>
 
   <!-- ========== SOCIAL ICON SIDEBAR ========== -->
-  <aside>
-    <ul class="sci font-lg">
-      <li>
-        <a href="#"><i class="fab fa-fw fa-facebook"></i></a>
+  <aside class="social-sidebar">
+    <!-- ==========
+      "font-lg" class controls the size of our font-awesome icons.
+      "fa-fw" class on icons allows the parent to control its size.
+       ========== -->
+    <ul class="social-sidebar__list font-lg">
+      <li class="social-sidebar__item">
+        <a class="social-sidebar__link" href="#"><i class="fab fa-fw fa-facebook"></i></a>
       </li>
-      <li>
-        <a href="#"><i class="fab fa-fw fa-twitter"></i></a>
+      <li class="social-sidebar__item">
+        <a class="social-sidebar__link" href="#"><i class="fab fa-fw fa-twitter"></i></a>
       </li>
-      <li>
-        <a href="#"><i class="fab fa-fw fa-instagram"></i></a>
+      <li class="social-sidebar__item">
+        <a class="social-sidebar__link" href="#"><i class="fab fa-fw fa-instagram"></i></a>
       </li>
     </ul>
   </aside>

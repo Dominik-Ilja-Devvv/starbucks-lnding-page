@@ -1,0 +1,64 @@
+/* ==================================================================================================== //
+// COMPONENTS
+// ==================================================================================================== */
+
+// Buttons
+// ================================================== //
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  color: var(--color-dark);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+// RESPONSIVE TITLE
+// ================================================== //
+.responsive-title {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 500px) {
+  .responsive-title { font-size: 2.8rem; }
+}
+
+@media screen and (min-width: 768px) {
+  .responsive-title { font-size: 4rem; line-height: 1.2; }
+}
+
+// SOCIAL MEDIA SIDEBAR
+// ================================================== //
+.social-sidebar {
+
+  &__list {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 4px;
+    padding-left: 4px;
+    background-color: #fdfdfd;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 0 0 3px 1px #e7e7e7;
+    transform: translateY(-50%);
+  }
+  &__item { list-style: none; }
+
+  &__link {
+    display: inline-block;
+    margin: 5px 0;
+    color: #606161;
+    transition: 0.35s;
+
+    &:hover { color: var(--color-primary); }
+  }
+}

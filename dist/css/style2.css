@@ -1,0 +1,189 @@
+/* ================================================================ //
+// HEADER NAVIGATION
+// ================================================================ */
+.main-header { height: var(--header-height); box-shadow: rgb(0 0 0 / 0.16) 0 1px 4px; }
+.main-header__logo { width: 72px; }
+.main-header__mobile-toggle { z-index: 100; }
+
+/* DESKTOP NAVIGATION
+// ================================================ */
+.main-header__nav { display: none; }
+
+/* MOBILE NAVIGATION
+// ================================================ */
+.main-header__mobile-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100vh;
+  visibility: hidden;
+  background-color: var(--color-white);
+  opacity: 0;
+  transition: 0.45s;
+  transform: scale(0);
+}
+.main-header__mobile-nav.show-nav {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (min-width: 768px) {
+  .main-header__nav { display: block; }
+  .main-header__mobile-nav { display: none; }
+  .main-header__mobile-toggle { display: none; }
+}
+
+/* ================================================================ //
+// DRINK DISPLAY
+// ================================================================ */
+.drink-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.drink-display__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  clip-path: circle(50% at 50% 50%);
+}
+
+.drink-display__main,
+.drink-display__background {
+  width: 100%;
+  max-width: 280px;
+  height: 100%;
+  max-height: 280px;
+}
+
+.drink-display__main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.drink-display__main img {
+  height: 100%;
+  max-height: 280px;
+}
+
+@media screen and (min-width: 400px) {
+  .drink-display__main,
+  .drink-display__background {
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    max-height: 400px;
+  }
+
+  .drink-display__main img {
+    height: 100%;
+    max-height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .drink-display__main,
+  .drink-display__background {
+    width: 100%;
+    max-width: 480px;
+    height: 100%;
+    max-height: 480px;
+  }
+
+  .drink-display__main img {
+    height: 100%;
+    max-height: 480px;
+  }
+}
+
+.drink-display__thumbnails {
+  display: flex;
+  justify-content: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.drink-display__thumbnails li {
+  display: inline-block;
+  padding-right: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.drink-display__thumbnail-image {
+  height: 110px;
+}
+
+@media screen and (min-width: 768px) {
+  .drink-display {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .drink-display__main {
+    order: 1;
+  }
+
+  .drink-display__thumbnails {
+    flex-direction: column;
+  }
+}
+
+/* ================================================================ //
+// SOCIAL ICONS SIDEBAR
+// ================================================================ */
+
+.sci {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 4px;
+  padding-left: 4px;
+  background-color: #fdfdfd;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  box-shadow: 0 0 3px 1px #e7e7e7;
+  transform: translateY(-50%);
+}
+
+.sci li { list-style: none; }
+
+.sci li a {
+  display: inline-block;
+  margin: 5px 0;
+  color: #606161;
+  transition: 0.35s;
+}
+
+.sci li a:hover { color: var(--color-primary); }
+
+/* .drink-display__background-2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  clip-path: circle(45% at 70% 99%);
+} */
+
+/* ================================================================ //
+// MEDIA QUERIES
+// ================================================================ */

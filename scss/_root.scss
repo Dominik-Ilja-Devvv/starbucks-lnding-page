@@ -1,0 +1,42 @@
+@use "sass:meta";
+
+/* ================================================================ //
+// FONT IMPORTS
+// ================================================================ */
+
+/* Poppins - font-family: 'Poppins', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Lora - font-family: 'Lora', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+/* Oleo Script - font-family: 'Oleo Script', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
+
+/* Caveat - font-familty: 'Caveat', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap");
+
+/* Josefin Sans - font-family: "Josefin Sans", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
+$font-poppins: "Poppins", sans-serif;
+$font-lora: "Lora", serif;
+$font-oleo: "Oleo Script", cursive;
+$font-caveat: "Caveat", cursive;
+$font-josefin: "Josefin Sans", sans-serif;
+
+/* ================================================================ //
+// ROOT VARIABLES
+// ================================================================ */
+:root {
+  // ------------------------------
+  // | #{} is an interpolation statement. An interpolation statement
+  // | will remove quotes from strings. In order to perserve quotes
+  // | we need to use meta.inspect() within the interpolation statement.
+  // ------------------------------
+  --body-font: #{meta.inspect($font-poppins)};
+  --color-white: #fff;
+  --color-dark: #333;
+  --color-primary: #006241;
+  --header-height: 7.1875rem;
+}

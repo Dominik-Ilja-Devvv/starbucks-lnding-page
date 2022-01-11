@@ -1,0 +1,171 @@
+/* ================================================================ //
+// HEADER NAVIGATION
+// ================================================================ */
+.main-header {
+  height: var(--header-height);
+  box-shadow: rgb(0 0 0 / 0.16) 0 1px 4px;
+
+  &__logo { width: 72px; }
+
+  &__mobile-toggle { z-index: 100; }
+}
+
+/* DESKTOP NAVIGATION
+// ================================================ */
+.main-header__nav { display: none; }
+
+/* MOBILE NAVIGATION
+// ================================================ */
+.main-header__mobile-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100vh;
+  visibility: hidden;
+  background-color: var(--color-white);
+  opacity: 0;
+  transition: 0.45s;
+  transform: scale(0);
+
+  .show-nav {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-header__nav { display: block; }
+  .main-header__mobile-nav, .main-header__mobile-toggle { display: none; }
+}
+
+/* ================================================================ //
+// DRINK DISPLAY
+// ================================================================ */
+.drink-display {
+  $-max-dimension: 280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  // ------------------------------
+  // | .drink-display__main, drink-display__background, & drink-display__image
+  // | are all highly linked together. 
+  // | 
+  // | The dimensions all need to be the same to allow the circle to retain its shape.
+  // | 
+  // | I haven't found a way to responsively allow the elements to "flow"
+  // | between screen sizes, and therefore we needed to create media queries
+  // | to assist with scaling up at larger screens.
+  // ------------------------------
+
+  &__main,
+  &__background {
+    width: 100%;
+    max-width: $-max-dimension;
+    height: 100%;
+    max-height: $-max-dimension;
+  }
+
+  &__image {
+    height: 100%;
+    max-height: $-max-dimension;
+  }
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    clip-path: circle(50% at 50% 50%);
+  }
+
+  &__main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+// TODO:
+// --------------------
+// > 1.) Create global breakpoints & update the media queries once that has been done.
+
+@media screen and (min-width: 400px) {
+  .drink-display {
+    $-max-dimension: 400px;
+
+    &__main, &__background {
+      width: 100%;
+      max-width: $-max-dimension;
+      height: 100%;
+      max-height: $-max-dimension;
+    }
+
+    &__image {
+      height: 100%;
+      max-height: $-max-dimension;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .drink-display {
+    $-max-dimension: 480px;
+
+    &__main, &__background {
+      width: 100%;
+      max-width: $-max-dimension;
+      height: 100%;
+      max-height: $-max-dimension;
+    }
+
+    &__image {
+      height: 100%;
+      max-height: $-max-dimension;
+    }
+  }
+}
+
+.drink-display__thumbnails {
+  display: flex;
+  justify-content: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.drink-display__thumbnails li {
+  display: inline-block;
+  padding-right: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.drink-display__thumbnail-image {
+  height: 110px;
+}
+
+@media screen and (min-width: 768px) {
+  .drink-display {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .drink-display__main {
+    order: 1;
+  }
+
+  .drink-display__thumbnails {
+    flex-direction: column;
+  }
+}
