@@ -28,8 +28,9 @@
   opacity: 0;
   transition: 0.45s;
   transform: scale(0);
+  z-index: 100;
 
-  .show-nav {
+  &.show-nav {
     visibility: visible;
     opacity: 1;
     transform: scale(1);

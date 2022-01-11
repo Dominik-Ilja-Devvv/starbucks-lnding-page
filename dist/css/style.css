@@ -611,8 +611,9 @@ button {
   opacity: 0;
   transition: 0.45s;
   transform: scale(0);
+  z-index: 100;
 }
-.main-header__mobile-nav .show-nav {
+.main-header__mobile-nav.show-nav {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
@@ -636,6 +637,16 @@ button {
   align-items: center;
   width: 100%;
 }
+.drink-display__main, .drink-display__background {
+  width: 100%;
+  max-width: 280px;
+  height: 100%;
+  max-height: 280px;
+}
+.drink-display__image {
+  height: 100%;
+  max-height: 280px;
+}
 .drink-display__background {
   position: absolute;
   top: 0;
@@ -645,12 +656,6 @@ button {
   background-color: var(--color-primary);
   clip-path: circle(50% at 50% 50%);
 }
-.drink-display__main, .drink-display__background {
-  width: 100%;
-  max-width: 280px;
-  height: 100%;
-  max-height: 280px;
-}
 .drink-display__main {
   position: relative;
   display: flex;
@@ -659,35 +664,27 @@ button {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
-.drink-display__image {
-  height: 100%;
-  max-height: 280px;
-}
 
 @media screen and (min-width: 400px) {
-  .drink-display__main,
-.drink-display__background {
+  .drink-display__main, .drink-display__background {
     width: 100%;
     max-width: 400px;
     height: 100%;
     max-height: 400px;
   }
-
-  .drink-display__main img {
+  .drink-display__image {
     height: 100%;
     max-height: 400px;
   }
 }
 @media screen and (min-width: 768px) {
-  .drink-display__main,
-.drink-display__background {
+  .drink-display__main, .drink-display__background {
     width: 100%;
     max-width: 480px;
     height: 100%;
     max-height: 480px;
   }
-
-  .drink-display__main img {
+  .drink-display__image {
     height: 100%;
     max-height: 480px;
   }
